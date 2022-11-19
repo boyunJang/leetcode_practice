@@ -1,0 +1,1 @@
+../../04.algorithm/algorithm_1/35.search_insert_position.py
