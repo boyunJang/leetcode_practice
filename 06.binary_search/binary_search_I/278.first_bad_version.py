@@ -1,0 +1,1 @@
+../../02.leetcode_75/level_1/278.first_bad_version.py
