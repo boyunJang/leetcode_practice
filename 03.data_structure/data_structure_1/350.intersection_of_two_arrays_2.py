@@ -1,16 +1,13 @@
-from collections import defaultdict
+from collections import Counter
 
 class Solution:
     def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        num1_dic = defaultdict(int)
-        for n in nums1:
-            num1_dic[n] += 1
+        dic1 = Counter(nums1)
+        dic2 = Counter(nums2)
 
-        ans_dic = defaultdict(int)
         answer = []
-        for n in nums2:
-            if n in num1_dic:
-                if n in ans_dic and ans_dic[n] == num1_dic[n]: continue
-                ans_dic[n] += 1
-                answer.append(n)
+
+        for key, value in dic1.items():
+            if key in dic2:
+                answer = answer + [key] * min(value, dic2[key])
         return answer
