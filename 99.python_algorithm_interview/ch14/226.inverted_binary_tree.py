@@ -1,0 +1,1 @@
+../../03.data_structure/data_structure_1/226.inverted_binary_tree.py
